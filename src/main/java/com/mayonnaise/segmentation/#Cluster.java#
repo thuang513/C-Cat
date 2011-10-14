@@ -1,0 +1,14 @@
+package com.mayonnaise.segmentation;
+
+/**
+ *  A {@code Cluster} represents a group of {@code Sentence}s that seem to be
+ *  talking about a similar idea/concept.
+ *
+ *  @author thuang513@gmail.com (Terry Huang)
+ */
+public class Cluster {
+
+	public Cluster() {
+		
+	}
+}

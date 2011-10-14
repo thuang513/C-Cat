@@ -1,0 +1,30 @@
+package com.mayonnaise.common;
+
+import java.util.logging.Logger;
+
+import com.mayonniase.common.AbstractSentence;
+import com.mayonnaise.common.Sentence;
+
+/**
+ *  A concrete {@code Sentence} implementation that uses cosine
+ *  similarity to determine the similarity of {@code Sentence}s.
+ *
+ *  @author thuang513@gmail.com (Terry Huang).
+ */
+
+public class CosineSimilaritySentence extends AbstractSentence {
+
+	/**
+	 * Setup the logger.
+	 */
+	private static final Logger LOGGER = 
+		Logger.getLogger(CosineSimilaritySentence.class.getName());
+
+	/**
+	 *  Constructor.
+	 */
+	public CosineSimilaritySentence(String content) {
+		super(content);
+	}
+
+}
