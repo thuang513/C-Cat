@@ -1,5 +1,6 @@
 package gov.llnl.ontology.text.corpora.rss;
 
+import gov.llnl.ontology.text.corpora.Article;
 import gov.llnl.ontology.text.corpora.BbcArticleFactory;
 import gov.llnl.ontology.text.corpora.rss.NewsHandler;
 

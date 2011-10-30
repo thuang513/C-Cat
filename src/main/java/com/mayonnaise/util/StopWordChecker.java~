@@ -1,0 +1,7 @@
+package com.mayonnaise.util;
+
+
+public class StopWordChecker {
+
+
+}

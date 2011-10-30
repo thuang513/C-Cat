@@ -1,10 +1,10 @@
 package gov.llnl.ontology.text.corpora;
 
-import java.util.logging.Logger;
-import java.util.Set;
-
 import gov.llnl.ontology.text.Document;
 import gov.llnl.ontology.text.corpora.AbstractArticle;
+
+import java.util.logging.Logger;
+import java.util.Set;
 
 /**
  * This class represents an article in the BBC News website 
@@ -26,7 +26,7 @@ public class BbcArticle extends AbstractArticle implements Document {
 	}
 
 	public String key() {
-		return getArticleUrl();
+		return super.getArticleUrl();
 	}
 
 	public long id() {

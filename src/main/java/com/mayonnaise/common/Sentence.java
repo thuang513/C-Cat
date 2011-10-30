@@ -1,9 +1,12 @@
 package com.mayonnaise.common;
 
-import java.util.List;
-import java.util.Set;
 
 import com.mayonnaise.segmentation.Cluster;
+
+import java.util.List;
+import java.util.Set;
+import java.util.Map;
+import edu.ucla.sspace.vector.DoubleVector;
 
 /**
  *  Represents a sentence of an article. Different {@code Sentence} objects
@@ -22,12 +25,12 @@ public interface Sentence {
    *  and another sentence. Internally the Sentence object should
 	 *  record the result and also update the other object's internals.
 	 */
-	double scoreWith(Sentence other);
+	Double scoreWith(Sentence other);
 
 	/**
 	 *  Update the internal map that keeps track of the similarity scores.
 	 */
-	double scoreWith(Sentence other, double score);
+	void scoreWith(Sentence other, Double score);
 
 	/**
 	 *  Adds a "groupie" to this sentence. A "groupie" is a {@code Sentence}
@@ -38,22 +41,27 @@ public interface Sentence {
 	/**
 	 *  Returns the set groupies associated with this {@code Sentence}.
 	 */
-	Set getGroupies();
+	Set<Sentence> getGroupies();
 
 	/**
-	 *  Get the cluster that this class belongs to.
+	 *  Gets the set of {@code Cluster}s that this Sentence belongs to.
 	 */
-	Cluster getCluster();
+	Set<Cluster> getClusterSet();
 
 	/**
-	 *  Set the cluster that this sentence belongs to.
+	 *  Mark this {@code Sentence} as belonging to a {@code Cluster}.
 	 */
-	void setCluster(Cluster c);
+	void addCluster(Cluster c);
 
 	/**
-	 * Get the top scoring sentences.
+	 * Get the top scoring sentences. The {@code Set} contains {@code Map} entries
+	 * which are sorted in DESCENDING order. The key entry is the similarity score
+	 * of this sentence to other sentence. The value entry is the "other sentence".
 	 */
-	List getTopScores();
+	Map.Entry<Sentence, Double>[] getTopScores();
+
+	double getHighestScore();
 	
+	DoubleVector getSentenceVector();
 	
 }
