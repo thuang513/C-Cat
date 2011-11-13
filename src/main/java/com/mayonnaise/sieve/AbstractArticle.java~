@@ -1,0 +1,19 @@
+package com.mayonnaise.sieve;
+
+
+public abstract class AbstractArticle implements Article {
+	
+
+	private String articleUrl = null;
+
+	public AbstractArticle(String articleUrl) {
+		this.articleUrl = articleUrl;
+	}
+
+	/**
+	 * {@inherit}
+	 */
+	public String getArticleUrl() {
+		
+	}
+}
