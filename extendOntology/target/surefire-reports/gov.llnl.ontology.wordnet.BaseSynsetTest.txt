@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: gov.llnl.ontology.wordnet.BaseSynsetTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+=======
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+>>>>>>> f5a629243278b22d2135935baf36d033c12271f9
